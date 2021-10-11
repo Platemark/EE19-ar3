@@ -1,0 +1,6 @@
+Nu testar vi vår gästbok
+ .
+            Vi sparar till gastbok.txt
+Och läser från gastbok.txt
+
+            Albin

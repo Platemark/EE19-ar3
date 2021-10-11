@@ -1,0 +1,5 @@
+
+            Nät inställningar
+            Ip: 192.182.2312.1
+            Subnetsmask: 192.1242.12.1
+            Default gatemway: 192.182.2312.1
