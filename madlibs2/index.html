@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Madlibs</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1 class="display-4">Madlibs - Prepare to fight</h1>
+        <form class="kol2" action="madlibs.php" method="POST">
+            <label>Enter adjective</label>
+            <input type="text" name="adjective" required>
+
+            <label>Enter verb ending in ing</label>
+            <input type="text" name="verbing" required>
+            
+            <label>Type of food</label>
+            <input type="text" name="food" required>
+
+            <label>Noun</label>
+            <input type="text" name="noun" required>
+
+            <label>Number</label>
+            <input type="text" name="number" required>
+
+            <label>Part of the body (plural)</label>
+            <input type="text" name="bodypart" required>
+
+            <button class="primary">Skicka</button>
+        </form>
+    </div>
+</body>
+</html>

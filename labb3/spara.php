@@ -25,7 +25,7 @@
         $namn = filter_input(INPUT_POST, "namn", FILTER_SANITIZE_STRING);
 
         if ($rubrik && $meddelande && $namn) {
-            $filnamn = "gastbok.txt";
+            $filnamn = "gastbok.txt";       
 
             setlocale(LC_ALL, "sv_SE.utf8");
             $klockslag = strftime("%H %M %S %A %y %B");
@@ -36,6 +36,8 @@
             $texten .= "<p>$namn</p>";
 
             file_put_contents($filnamn, $texten);
+
+            echo $texten;
 
             // Bekräftelse
 
