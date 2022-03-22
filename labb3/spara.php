@@ -37,8 +37,6 @@
 
             file_put_contents($filnamn, $texten);
 
-            echo $texten;
-
             // Bekräftelse
 
             echo "<p class=\"alert alert-success\">Meddelandet har sparats</p>";
