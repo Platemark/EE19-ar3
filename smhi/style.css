@@ -1,0 +1,11 @@
+
+
+body {
+    background: antiquewhite;
+}
+.kontainer {
+    width: 700px;
+    margin: auto;
+    padding: 2em;
+    background: #FFF;
+}

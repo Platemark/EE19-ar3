@@ -1,0 +1,12 @@
+body {
+    background: bisque;
+}
+
+
+
+.kontainer {
+    width: 700px;
+    margin: 5em auto;
+    padding: 1em;
+    background: white;
+}

@@ -1,6 +1,13 @@
 <?php
 include "konfigdb.php";
 session_start();
+
+if (!isset($_SESSION['inloggad'])) {
+    $_SESSION['inloggad'] = false;
+}
+if ($_SESSION['inloggad'] == false) {
+    header("Location: login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="sv">
@@ -14,30 +21,36 @@ session_start();
 </head>
 
 <body>
+    <?php
+        if ($_SESSION['inloggad'] == true) {
+            echo "<p class\"alert alert-success\">Du är inloggad</p>";
+        } else {
+            echo "<p class\"alert alert-warning\">Du är utloggad</p>";
+        }
+
+    ?>
     <div class="kontainer">
         <h1>Bloggen</h1>
         <nav>
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="regi.php">Registrera</a>
-                </li>
+        <ul class="nav nav-tabs">
                 <?php
-                if ($_SESSION['inloggad'] == false) {                
-                
+                if ($_SESSION['inloggad'] == false) {
                 ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.php">Logga in</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Logga in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Registrera</a>
+                    </li>
                 <?php
-                }
+                } else {
                 ?>
-                <?php
-                if ($_SESSION['inloggad'] == true) {                
-                
-                ?>
-                <li class="nav-item">
-                    <a class="nav-link active" href="logout.php">Logga ut</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.php">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="logout.php">Logga ut</a>
+                    </li>
                 <?php
                 }
                 ?>
@@ -63,6 +76,7 @@ session_start();
 
             <?php
             $_SESSION['inloggad'] = false;
+            header("Location: login.php");
             ?>
         </main>
     </div>

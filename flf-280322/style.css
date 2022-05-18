@@ -1,0 +1,9 @@
+.kontainer {
+    width: 600px;
+    padding: 4em;
+    background: rgb(230, 223, 223);
+    margin: auto;
+}
+button {
+    margin-top: 2em;
+}
